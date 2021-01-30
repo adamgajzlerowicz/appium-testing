@@ -1,6 +1,7 @@
 import wd from 'wd';
-// var path = require('path');
+
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
+
 const PORT = 4723;
 const config = {
   platformName: 'Android',
@@ -10,6 +11,7 @@ const config = {
 };
 
 const driver = wd.promiseChainRemote('localhost', PORT);
+
 beforeAll(async () => {
   await driver.init(config);
   await driver.sleep(3000);
